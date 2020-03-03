@@ -1,0 +1,14 @@
+.dashboard{
+    background-color: #17a2b8;
+    height: 100vh;
+    
+}
+
+.buttons{
+    margin-top: 40px;
+    margin-left: 36%;
+}
+
+button{
+    margin: 40px;
+}

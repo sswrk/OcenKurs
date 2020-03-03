@@ -1,0 +1,8 @@
+<div class="dashboard">
+    <div class="buttons">
+        <button *ngIf="!authService.isLoggedIn()" type="button" class="btn btn-primary btn-lg" routerLink="login">Logowanie</button>
+        <button *ngIf="!authService.isLoggedIn()" (click)="true" type="button" class="btn btn-secondary btn-lg" routerLink="register">Rejestracja</button>  
+    </div>
+    <router-outlet *ngIf="true"></router-outlet>
+</div>
+
