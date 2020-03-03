@@ -1,0 +1,7 @@
+<div class="course">
+        <img src="{{ image }}" />
+        <h5 >{{ name }}</h5>     
+        
+        <button class="btn btn-success" routerLink="/editCourse/{{ courseid }}">Edytuj</button>
+        <button class="btn btn-success" (click)="remove(courseid)">Usuń</button>
+  </div>
