@@ -1,0 +1,10 @@
+<ul>
+    <li *ngIf="authService.isLoggedIn()"><a routerLink="/courses">Kursy</a></li>
+    <li><a *ngIf="authService.isLoggedIn() && authService.isAdmin()" routerLink="/addCourse">Dodaj kurs</a></li>
+    <li><a *ngIf="authService.isLoggedIn() && authService.isAdmin()" routerLink="/coursesadmin">Edytuj kursy</a></li>
+    <li style="float:right"><a *ngIf="authService.isLoggedIn()" (click)="authService.SignOut()">Wyloguj się</a></li>
+    <li style="float:right"><p *ngIf="authService.isLoggedIn()">{{authService.getUser().email}}</p></li>
+    <li style="float:right"><p *ngIf="authService.isLoggedIn() && authService.isAdmin()">Administrator</p></li>
+    <li style="float:right"><p *ngIf="authService.isLoggedIn() && !authService.isAdmin()">Użytkownik</p></li>
+    <li style="float:right"><p *ngIf="!authService.isLoggedIn()">Niezalogowany</p></li>
+  </ul>
