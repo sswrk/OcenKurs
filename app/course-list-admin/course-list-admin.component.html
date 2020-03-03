@@ -1,0 +1,14 @@
+<div class="filter">
+    <input [(ngModel)]="searchText0" placeholder="Nazwa">
+    <input [(ngModel)]="searchText1" placeholder="ECTS">
+    <input [(ngModel)]="searchText2" placeholder="Semestr">
+    <input [(ngModel)]="searchText3" placeholder="Ocena">
+</div>
+<app-course-admin class="list"
+    *ngFor="let course of courses | filter: searchText0 | filterByEcts: searchText1 | filterBySemester: searchText2 | filterByGrade: searchText3"
+    [courseid]="course.courseid"
+    [image]="course.image"
+    [name]="course.name"
+    (signaledDeleted)="refresh($event)">
+    
+</app-course-admin>

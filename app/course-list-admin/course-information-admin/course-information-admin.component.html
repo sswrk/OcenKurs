@@ -1,0 +1,11 @@
+<img src="{{ course.image }}">
+<h1>{{ course.name }}</h1>
+<p>{{ course.description }}</p>
+
+<p>Semestr: {{ course.semester }}</p>
+<p>ECTS: {{ course.ects }}</p>
+<p>Ilość miejsc: {{ course.maxStudents }}</p>
+<p>Forma kursu: {{ course.formOfCourse }}</p>
+<p>Ocena: {{ course.grade }}</p>
+<button routerLink="/" (click)="remove(course.courseid)">Usuń</button>
+<button routerLink="/editCourse/{{ course.courseid }}">Edytuj</button>
