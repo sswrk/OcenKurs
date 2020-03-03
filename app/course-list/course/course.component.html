@@ -1,0 +1,15 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="course">
+  <a routerLink="{{ courseid }}"> <img src="{{ image }}" /></a>
+      <h5 >{{ name }}</h5> 
+      <p>Ocena: {{ grade | number: '.2-2'}}</p>
+      <p>Głosy: {{ votes }}</p>
+      
+      <div>
+        <span id="1" class="fa fa-star checked" (click)="rate(1)"></span>
+        <span id="2" class="fa fa-star checked" (click)="rate(2)"></span>
+        <span id="3" class="fa fa-star checked" (click)="rate(3)"></span>
+        <span id="4" class="fa fa-star checked" (click)="rate(4)"></span>
+        <span id="5" class="fa fa-star checked" (click)="rate(5)"></span>
+      </div>
+</div>

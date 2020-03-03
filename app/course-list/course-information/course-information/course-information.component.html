@@ -1,0 +1,20 @@
+<div class="info"> 
+  <img src="{{ course.image }}">
+      <h1>{{ course.name }}</h1>
+      <p>{{ course.description }}</p>
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <p>Semestr: {{ course.semester }}</p>
+      <p>ECTS: {{ course.ects }}</p>
+      <p>Ilość miejsc: {{ course.maxStudents }}</p>
+      <p>Forma kursu: {{ course.formOfCourse }}</p>
+      <p>Ocena: {{ course.grade | number: '.2-2'}}</p>
+      <p>Głosy: {{ course.votes }}</p>
+      <div class="stars">
+            <span id="1" class="fa fa-star checked" (click)="rate(1)"></span>
+            <span id="2" class="fa fa-star checked" (click)="rate(2)"></span>
+            <span id="3" class="fa fa-star checked" (click)="rate(3)"></span>
+            <span id="4" class="fa fa-star checked" (click)="rate(4)"></span>
+            <span id="5" class="fa fa-star checked" (click)="rate(5)"></span>
+      </div>
+</div> 

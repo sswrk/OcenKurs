@@ -1,0 +1,18 @@
+<div class="filter">
+    <input [(ngModel)]="searchText0" placeholder="Nazwa">
+    <input [(ngModel)]="searchText1" placeholder="ECTS">
+    <input [(ngModel)]="searchText2" placeholder="Semestr">
+    <input [(ngModel)]="searchText3" placeholder="Ocena">
+</div>
+<div class="list" *ngIf="(courses|async| filter: searchText0 | filterByEcts: searchText1 | filterBySemester: searchText2 | filterByGrade: searchText3) as filtered">
+    <app-course class="element"
+        *ngFor="let course of filtered"
+        [courseid]="course.courseid"
+        [image]="course.image"
+        [name]="course.name"
+        [grade]="course.grade"
+        [votes]="course.votes"
+    >
+        
+    </app-course>
+</div>

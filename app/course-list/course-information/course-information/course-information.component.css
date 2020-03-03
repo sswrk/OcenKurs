@@ -1,0 +1,16 @@
+.lead{
+    text-align: justify;
+}
+
+.checked {
+    color: orange;
+  }
+
+.info{
+    text-align: center;
+    padding-bottom: 4%;
+}
+
+img{
+    margin-top: 5%;
+}
